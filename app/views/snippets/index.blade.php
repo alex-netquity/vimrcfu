@@ -35,6 +35,9 @@
         @include('partials.snippet', ['img' => true])
       @endforeach
     </div>
+      <div class="col-sm-4 col-sm-offset-2 col-xs-12">
+      @include('partials.statistics_sorted')
+      </div>
   </div>
 
   <div class="row">

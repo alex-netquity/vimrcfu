@@ -7,6 +7,8 @@ Route::get('feed', 'FeedController@index');
 
 Route::get('search', ['as' => 'search', 'uses' => 'SearchController@index']);
 
+Route::get('snippet/points', ['as' => 'snippets.points', 'uses' => 'SnippetsController@points']);
+Route::get('snippet/comments', ['as' => 'snippets.comments', 'uses' => 'SnippetsController@comments']);
 Route::model('snippet', 'Vimrcfu\Snippets\Snippet');
 Route::resource('snippet', 'SnippetsController', ['except' => 'destroy']);
 Route::get('snippet/{id}/up', ['as' => 'vote.up', 'uses' => 'VotesController@up']);
